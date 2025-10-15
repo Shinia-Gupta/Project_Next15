@@ -37,6 +37,8 @@ import { Counter } from "./Counter";
 
 
 //Now I have created it as a server component and importing the client component separately into it. We can use metadat object for this page now
+//Counter component will give the template metadata title now.
+//Template metadata tile is formed with the template defined in the parent layout file and the title defined in the child component that gets merged together
 export const metadata={
     title:"Counter Page Metadata title"
 }

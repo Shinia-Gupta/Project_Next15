@@ -1,3 +1,10 @@
+//type 3- absolute metadata title
+export const metadata={
+    title:{
+      absolute:"Dashboard | Absolute title"
+    }
+}
+
 export default function Dashboard() {
   return (
     <main>
