@@ -3,6 +3,8 @@
 // ## Error Type
 // Build Error
 
+import { Counter } from "./Counter";
+
 // ## Error Message
 // Ecmascript file had an error
 
@@ -20,9 +22,9 @@
 // You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
 
 
-"use client"
+// "use client"
 
-import { useState } from "react"
+// import { useState } from "react"
 
 //try uncommenting this metadata object and check the error
 //we cannot configure metadata in client component
@@ -33,14 +35,22 @@ import { useState } from "react"
 //     title:"Counter Page Metadata title"
 // }
 
-export default function Counter() {
-    const [count,setCount]=useState(0);
+
+//Now I have created it as a server component and importing the client component separately into it. We can use metadat object for this page now
+export const metadata={
+    title:"Counter Page Metadata title"
+}
+
+
+export default function CounterPage() {
+    // const [count,setCount]=useState(0);
   return (
-    <main>
-      <h1>Welcome to Counter Page!</h1>
-      <h2>Count: {count}</h2>
-      <button onClick={()=>setCount(count+1)}>Increment</button>
-      <button onClick={()=>setCount(count-1)}>Decrement</button>
-    </main>
+    // <main>
+    //   <h1>Welcome to Counter Page!</h1>
+    //   <h2>Count: {count}</h2>
+    //   <button onClick={()=>setCount(count+1)}>Increment</button>
+    //   <button onClick={()=>setCount(count-1)}>Decrement</button>
+    // </main>
+    <Counter/>
   );
 }

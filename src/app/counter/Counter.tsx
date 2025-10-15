@@ -1,0 +1,15 @@
+"use client"
+
+import { useState } from "react";
+
+export function Counter() { 
+    const [count,setCount]=useState(0);
+  return (
+    <main>
+      <h1>Welcome to Counter Page!</h1>
+      <h2>Count: {count}</h2>
+      <button onClick={()=>setCount(count+1)}>Increment</button>
+      <button onClick={()=>setCount(count-1)}>Decrement</button>
+    </main>
+  )
+}
