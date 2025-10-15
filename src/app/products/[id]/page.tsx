@@ -1,3 +1,5 @@
+//Server Component
+
 export default async function ProductsById({
     params
 }:{
