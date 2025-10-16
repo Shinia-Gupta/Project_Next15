@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 
 //Server Component
 export default async function ProductsById({
@@ -8,7 +8,10 @@ export default async function ProductsById({
 }) {
   const {id,reviewId}=await params;
   if(parseInt(id)>1000){
-    notFound();
+    // notFound();
+    console.log("Redirecting to /products page as product id is invalid");
+    
+    redirect('/products');
   }
   return (
     <main>
