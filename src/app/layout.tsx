@@ -1,3 +1,4 @@
+import './globals.css'
 export const metadata = {
     title: {
         default: 'Next.js App | Default Title',
@@ -26,6 +27,8 @@ export default function RootLayout({
                     style={{
                         backgroundColor: "ghostwhite",
                         padding: "1rem",
+                        color: "gray",
+                        fontWeight: "bold",
                     }}
                 >
                     <p>Footer</p>
